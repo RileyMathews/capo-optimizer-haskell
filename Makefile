@@ -3,7 +3,7 @@
 .PHONY: test
 
 clean:
-	rm -rf .build-artifacts dist .hiefiles .hifiles
+	rm -rf .build-artifacts dist .hiefiles .hifiles .hiedb
 
 build:
 	mkdir -p dist

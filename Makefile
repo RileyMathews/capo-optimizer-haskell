@@ -6,4 +6,4 @@ clean:
 
 build:
 	mkdir -p dist
-	ghc Main.hs -outputdir .build-artifacts/object-files -hidir .hifiles -fwrite-ide-info -hiedir .hiefiles -o dist/main
+	ghc -isrc src/Main.hs -outputdir .build-artifacts/object-files -hidir .hifiles -fwrite-ide-info -hiedir .hiefiles -o dist/main

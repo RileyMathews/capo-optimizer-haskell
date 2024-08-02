@@ -1,13 +1,10 @@
 module Main where
 
-import Lib
+import ModelsSpec qualified
 import Test.Hspec
-
-spec :: Spec
-spec = do
-  describe "MyFunction" $ do
-    it "should do something" $ do
-      getText `shouldBe` "Hello lib!"
+import TransposeSpec qualified
 
 main :: IO ()
-main = hspec spec
+main = do
+  hspec ModelsSpec.spec
+  hspec TransposeSpec.spec

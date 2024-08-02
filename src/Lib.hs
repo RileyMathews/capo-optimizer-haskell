@@ -1,4 +1,5 @@
 module Lib where
 
-getText :: String
-getText = "Hello lib!"
+run :: IO ()
+run = do
+  print "Hello!"

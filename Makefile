@@ -10,7 +10,6 @@ build:
 	ghc \
 		-isrc src/Main.hs \
 		-outputdir .build-artifacts/object-files \
-		-hidir .hifiles \
 		-fwrite-ide-info \
 		-hiedir .hiefiles \
 		-o dist/main
@@ -21,8 +20,10 @@ test:
 		-isrc \
 		-itest test/Spec.hs \
 		-outputdir .build-artifacts/object-files \
-		-hidir .hifiles \
 		-fwrite-ide-info \
 		-hiedir .hiefiles \
 		-o dist/test
 	dist/test
+
+ghciwatch:
+	ghciwatch --command "ghci -isrc -itest -fwrite-ide-info -hiedir .hiefiles -hidir .hifiles" --watch src --watch test

@@ -12,6 +12,10 @@ build:
 		-outputdir .build-artifacts/object-files \
 		-fwrite-ide-info \
 		-hiedir .hiefiles \
+		-fdefer-type-errors \
+		-Werror=deferred-type-errors \
+		-Werror=deferred-out-of-scope-variables \
+		-fno-defer-typed-holes \
 		-o dist/main
 
 test:
